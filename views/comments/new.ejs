@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+<div id="edit-cont" class="container">
+    <div class="ui sizer vertical segment">
+        <form class="ui form" action="/products/<%= product._id %>/comments" method="POST">
+            <div class="ui huge header">Add new comment about: <strong><%= product.name %></strong></div>
+            <div class="field">
+                <label>Product image: </label>
+                <div class="thumbnail">
+                    <div class="dipslay-block">
+                        <img src="<%= product.image %>" id="img-edit" class="img-thumbnail">
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Your opinion: </label>
+                <textarea name="comment[text]"></textarea>
+            </div>
+            <button class="btn btn-primary">Add comment!</button>
+        </form>
+        <div class="homepage">
+            <a href="/">Go to the home page</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+

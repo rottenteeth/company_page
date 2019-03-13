@@ -1,0 +1,54 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="thumbnail">
+                <div class="dipslay-block">
+                    <div class="caption-full">
+                        <h4><a><%=product.name%></a></h4>
+                    </div>
+                    <img class="img-show" src="<%= product.image %>">
+                    <div class="caption-full">
+                        <p><%= product.desc %></p>
+                        <p>
+                            <em>Added by <strong><%= product.author.username %></strong></em>
+                        </p>
+                        <% if(currentUser && product.author.id.equals(currentUser._id)){ %>
+                            <a class="btn btn-sm btn-warning" href="/products/<%= product._id %>/edit">Edit</a>
+                            <form id="delete-form" action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        <% }%>
+                    </div>
+                    <div class="well">
+                        <hr>
+                        <div class="text-right">
+                            <a class="btn btn-sm btn-success" href="/products/<%= product._id %>/comments/new">Add comment</a>
+                        </div>
+                        <% product.comments.forEach(function(comment){ %>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <strong><%= comment.author.username %></strong>
+                                    <span class="pull-right">10 days ago</span>
+                                    <p>
+                                        <%= comment.text %>
+                                    </p>
+                                    <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                                    <a class="btn btn-sm btn-warning"
+                                       href="/products/<%= product._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                                    <form id="delete-form" action="/products/<%= product._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                        <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+                                    </form>
+                                    <% } %>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<% include ../partials/footer %>
