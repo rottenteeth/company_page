@@ -20,13 +20,14 @@ router.get("/", function(req, res){
 router.post("/", middleware.isLoggedIn, function(req, res){
     // get data from form and add to products array
     var name = req.body.name;
+    var price = req.body.price;
     var image = req.body.image;
     var desc = req.body.desc;
     var author = {
         id: req.user._id,
         username: req.user.username
     };
-    var newProduct = {name: name, image: image, desc: desc, author:author}
+    var newProduct = {name: name, price: price, image: image, desc: desc, author:author}
     // Create a new product and save to DB
     Product.create(newProduct, function(err, newlyCreated){
         if(err){

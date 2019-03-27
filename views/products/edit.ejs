@@ -9,6 +9,10 @@
                 <input type="text" value="<%= product.name %>" name="product[name]">
             </div>
             <div class="field">
+                <label for="price">Price</label>
+                <input class="form-control" type="number" name="product[price]" id="price" value="<%= product.price %>" step="0.01" min="0" required>
+            </div>
+            <div class="field">
                 <label>Product image: </label>
                 <div class="thumbnail">
                     <div class="dipslay-block">
