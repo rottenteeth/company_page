@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
+//    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -13,6 +14,8 @@
     "express": "~4.16.0",
     "express-sanitizer": "^1.0.5",
     "express-session": "^1.15.6",
+    "heroku": "^7.22.7",
+    "heroku-cli": "^7.0.9",
     "method-override": "^3.0.0",
     "mongodb": "^3.1.13",
     "mongoose": "^5.4.14",
