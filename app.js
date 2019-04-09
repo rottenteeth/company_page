@@ -19,7 +19,9 @@ var commentRoutes    = require("./routes/comments"),
 
 //DB CONNECT
 // mongoose.connect("mongodb://localhost/company", { useNewUrlParser: true });
-mongoose.connect("mongodb+srv://rottenteeth:modecom12@company-psphb.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
+// mongoose.connect("mongodb+srv://rottenteeth:modecom12@company-psphb.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
+
+process.env.DATABASEURL;
 
 //APP SETUP
 app.use(bodyParser.urlencoded({extended: true}));
