@@ -22,7 +22,15 @@ var commentRoutes    = require("./routes/comments"),
 // mongoose.connect("mongodb+srv://rottenteeth:modecom12@company-psphb.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
 
 var url = process.env.DATABASEURL || "mongodb://localhost/company";
-mongoose.connect(url);
+mongoose.connect(url, { useNewUrlParser: true }).then(() => {
+    console.log("Connected to Database");
+}).catch((err) => {
+    console.log("Not Connected to Database ERROR! ", err);
+});
+
+// mongoose.connect(url);
+
+
 
 //APP SETUP
 app.use(bodyParser.urlencoded({extended: true}));
