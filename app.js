@@ -10,7 +10,7 @@ var flash = require("connect-flash");
 var Product = require("./models/product");
 var User = require("./models/user");
 
-const uri = "mongodb+srv://rottenteeth:modecom12@company-psphb.mongodb.net/test?retryWrites=true";
+// const uri = "mongodb+srv://rottenteeth:modecom12@company-psphb.mongodb.net/test?retryWrites=true";
 
 //requiring routes
 var commentRoutes    = require("./routes/comments"),
@@ -21,7 +21,8 @@ var commentRoutes    = require("./routes/comments"),
 // mongoose.connect("mongodb://localhost/company", { useNewUrlParser: true });
 // mongoose.connect("mongodb+srv://rottenteeth:modecom12@company-psphb.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
 
-process.env.DATABASEURL;
+var url = process.env.DATABASEURL || "mongodb://localhost/company";
+mongoose.connect(url);
 
 //APP SETUP
 app.use(bodyParser.urlencoded({extended: true}));
