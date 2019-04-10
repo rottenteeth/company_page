@@ -16,19 +16,12 @@ var commentRoutes    = require("./routes/comments"),
     indexRoutes     = require("./routes/index");
 
 //DB CONNECT
-// mongoose.connect("mongodb://localhost/company", { useNewUrlParser: true });
-// mongoose.connect("mongodb+srv://rottenteeth:modecom12@company-psphb.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
-
 var url = process.env.DATABASEURL || "mongodb+srv://rottenteeth:modecom12@company-psphb.mongodb.net/test?retryWrites=true";
 mongoose.connect(url, { useNewUrlParser: true }).then(() => {
     console.log("Connected to Database");
 }).catch((err) => {
     console.log("Not Connected to Database ERROR! ", err);
 });
-
-// mongoose.connect(url);
-
-
 
 //APP SETUP
 app.use(bodyParser.urlencoded({extended: true}));
