@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <title>My First Company</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.0/dist/semantic.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="/">COMPANY</a>
+        <a class="navbar-brand active" href="/">COMPANY</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,15 +25,28 @@
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Contact</a>
                 </li>
+                <% if(currentUser){ %>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User Panel
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/products/new">Add product</a>
+                        <a class="dropdown-item" href="#">Add category</a>
+                    </div>
+                </li>
+                <% }%>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+
+            <form>
                 <% if(!currentUser){ %>
-                    <a class="nav-link" href="/login">Sing In</a>
-                    <a class="nav-link" href="/register">Register</a>
+                    <a class="btn btn-sm btn-primary" href="/login">Sing In</a>
+                    <a class="btn btn-sm btn-success" href="/register">Register</a>
                 <% } else { %>
-                    <a class="nav-link" href="/">Logged in as: <%= currentUser.username %></a>
-                    <a class="nav-link" href="/logout">Logout</a>
+                    <a class="btn btn-sm btn-info" href="/">Logged in as: <%= currentUser.username %></a>
+                    <a class="btn btn-sm btn-danger" href="/logout">Logout</a>
                 <% } %>
+
             </form>
         </div>
     </div>
@@ -54,14 +65,5 @@
             <div class="jumbotron jumbotron-fluid">
                 <h1 class="display-4">MY COMPANY NAME</h1>
                 <p class="lead">A brief description of your company..</p>
-            </div>
-            <div class="admin-buttons">
-                <% if(currentUser){ %>
-                    <div id="admin-role">
-                        <h1 class="display-6">Admin Panel</h1>
-                    </div>
-                    <a class="btn btn-primary btn-sm" href="/products/new">Add product</a>
-                    <a class="btn btn-secondary btn-sm disabled" href="#">Add category</a> <!--doesn't work yet -->
-                <% }%>
             </div>
     </div>
