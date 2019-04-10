@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06da2a00-b0f6-4814-a4d0-a57307311dc8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -136,7 +137,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="179" />
-          <entry key="ejs" value="467" />
+          <entry key="ejs" value="496" />
           <entry key="js" value="5" />
           <entry key="txt" value="35" />
         </counts>
@@ -144,7 +145,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="179" />
-          <entry key="EJS" value="463" />
+          <entry key="EJS" value="492" />
           <entry key="JavaScript" value="9" />
           <entry key="PLAIN_TEXT" value="35" />
         </counts>
@@ -202,8 +203,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/partials/header.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="37" column="22" lean-forward="true" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+            <state relative-caret-position="242">
+              <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -306,8 +307,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="409" />
-    <option name="width" value="964" />
+    <option name="x" value="676" />
+    <option name="width" value="697" />
     <option name="height" value="775" />
   </component>
   <component name="ProjectView">
@@ -444,7 +445,7 @@
       <workItem from="1554307711183" duration="595000" />
       <workItem from="1554809997541" duration="7687000" />
       <workItem from="1554879867336" duration="856000" />
-      <workItem from="1554891668330" duration="7910000" />
+      <workItem from="1554891668330" duration="8784000" />
     </task>
     <task id="LOCAL-00001" summary="Added Dynamic Price Feature">
       <created>1553685237936</created>
@@ -464,7 +465,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120816000" />
+    <option name="totallyTimeSpent" value="121690000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -479,14 +480,14 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.123298034" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.027231468" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" weight="0.32872504" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.29339477" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.29339477" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -494,7 +495,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5045386" side_tool="true" weight="0.32872504" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49546143" visible="true" weight="0.32872504" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49546143" weight="0.32872504" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32872504" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32872504" />
       <window_info anchor="bottom" id="Heroku" order="13" weight="0.32872504" />
@@ -702,8 +703,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/header.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="37" column="22" lean-forward="true" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        <state relative-caret-position="242">
+          <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
         </state>
       </provider>
     </entry>

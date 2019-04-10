@@ -28,7 +28,7 @@
                 <% if(currentUser){ %>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        User Panel
+                        Admin Panel
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/products/new">Add product</a>
@@ -36,6 +36,8 @@
                     </div>
                 </li>
                 <% }%>
+            </ul>
+
             <form>
                 <% if(!currentUser){ %>
                     <a class="btn btn-sm btn-primary" href="/login">Sing In</a>
@@ -44,7 +46,6 @@
                     <a class="btn btn-sm btn-info" href="/">Logged in as: <%= currentUser.username %></a>
                     <a class="btn btn-sm btn-danger" href="/logout">Logout</a>
                 <% } %>
-
             </form>
         </div>
     </div>
@@ -64,5 +65,4 @@
                 <h1 class="display-4">YOUR COMPANY NAME</h1>
                 <p class="lead">A brief description of your company..</p>
             </div>
-
     </div>
